@@ -738,43 +738,6 @@ const TradingApp = () => {
         // setSpotPositionsCount(count)
       }
 
-      // if (data.closedSpotPositions) {
-      //   count = data.closedSpotPositions.length;
-      //   if (count !== spotClosedPositionsCount)
-      //     spotClosedPositionsDiv.innerHTML = ""; // Clear previous closed positions
-
-      //   data.closedSpotPositions.forEach((position) => {
-      //     if (position.positionType == "sell" && position.orderLimit == 0) {
-      //       spotBalances[assetTypes.indexOf(position.assetType) + 1] -=
-      //         position.amount;
-      //     }
-      //     let positionDiv = document.createElement("div");
-
-      //     if (count !== spotClosedPositionsCount) {
-      //       positionDiv.textContent = `
-      //                               ${1 - position.orderLimit}-${position.orderType
-      //         }-${position.positionType}-
-      //                               Amount: ${position.amount}(${position.assetType
-      //         }),
-      //                               Entry Price: ${position.entryPrice}(USDT),
-      //                           `;
-      //       if (position.orderType == "limit")
-      //         positionDiv.textContent += ` Limit Price: $${position.limitPrice},`;
-      //       if (position.orderType == "limit") {
-      //         if (position.orderLimit == 1) {
-      //           if (position.positionType == "sell")
-      //             positionDiv.style.backgroundColor = "#295843";
-      //           if (position.positionType == "buy")
-      //             positionDiv.style.backgroundColor = "#694456";
-      //         }
-      //       }
-
-      //       spotClosedPositionsDiv.appendChild(positionDiv);
-      //     }
-      //   });
-      //   spotClosedPositionsCount = count;
-      //   // setSpotClosedPositionsCount(count)
-      // }
 
       if (spotCurrentPrices.length) {
         spotBalancesUpdate();
@@ -3106,10 +3069,10 @@ const TradingApp = () => {
             <span>Mode:</span>
             <select name="transferType" id="transfer-USDT-type">
               <option value="fromFutures" selected>
-                Futures -> Spot
+                Futures - Spot
               </option>
               <option value="fromSpot" selected>
-                Spot -> Futures
+                Spot - Futures
               </option>
             </select>
             <span>Amount:</span>
